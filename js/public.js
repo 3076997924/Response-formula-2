@@ -1,0 +1,11 @@
+$(function(){
+    //点击菜单按钮切换
+    $('.hdMenu').click(function(){
+        $('.hdNav').slideToggle()
+        $('.bodymask').show()
+    })
+    $('.bodymask').click(function(){
+        $('.hdNav').slideUp()
+        $(this).hide()
+    })
+})

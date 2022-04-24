@@ -1,0 +1,404 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+}
+body,html{
+    overflow-x: hidden;
+}
+img{
+    border: 0;
+}
+input,textarea{
+    outline: none;
+}
+
+.pubCon{
+    width: 1200px;
+    margin: 0 auto;
+}
+.pubTit{
+    text-align: center;
+    padding-bottom: 60px;
+}
+.pubTit h2{
+    font-size: 32px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    line-height: 1.6em;
+}
+.pubTit .line {
+    width: 50px;
+    height: 2px;
+    background: #00abd9;
+    margin: 0 auto;
+}
+.bodymask {
+    display: none;
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+}
+
+/* header section  */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 60px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid #0fcfd7;
+}
+.hdCon{
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hdNav ul{
+    display: flex;
+}
+.hdNav li a{
+    position: relative;
+    display: block;
+    padding:0 30px;
+    font-size: 18px;
+    color: #333;
+}
+.hdNav li:hover a{
+    color: #00abd9;
+}
+.hdNav li a::after{
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #00abd9;
+}
+.hdNav li:hover a::after{
+    display: block;
+}
+.hdMenu{
+    display: none;
+    width: 40px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 5px 0;
+    cursor: pointer;
+}
+.hdMenu i {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: #aaa;
+    margin: 5px auto;
+}
+
+/* banner  */
+.banner{
+    position: relative;
+    height: 500px;
+}
+.banner a{
+    display: block;
+    height: 500px;
+    background: no-repeat center;
+}
+.banner a.small{
+    display: none;
+}
+
+/* serve   */
+.serve{
+    padding: 60px 0 30px;
+}
+.serveCon{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.serveCon .box{
+    display: block;
+    width: 25%;
+    height: auto;
+    padding: 0 30px;
+    margin-bottom: 30px;
+}
+.serveCon .box:hover .boxIcon{
+    background: #00abd9;
+}
+.serveCon .box:hover .boxIcon i{
+    color: #fff;
+}
+.serveCon .box:hover h3{
+    color: #00abd9;
+}
+.serveCon .boxIcon{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #00abd9;
+    border-radius: 50%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 100px;
+    transition: .3s;
+}
+.serveCon .boxIcon .iconfont{
+    font-size: 60px;
+    color: #00abd9;
+    transition: .3s;
+}
+.serveCon h3{
+    padding: 30px 0 15px;
+    font-weight: 400;
+    font-size: 22px;
+    color: #333;
+}
+.serveCon p{
+    line-height: 1.8em;
+    color: #666;
+}
+
+/* about */
+.about{
+    padding: 50px 0;
+    background: url(../images/aboutBg.jpg) no-repeat center;
+    background-attachment: fixed;
+}
+.abtTit h2{
+    color: #fff;
+}
+.abtTit .line {
+    background-color: #fff;
+}
+.abtCon p {
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.8em;
+    opacity: .8;
+    text-align: center;
+    padding: 0 70px;
+}
+.btn {
+    width: 100%;
+    padding-top: 100px;
+    text-align: center;
+}
+.btnleft,
+.btnright {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    margin: 0 10px;
+    color: #fff;
+    border-radius: 5px;
+    line-height: 50px;
+    font-size: 20px;
+    opacity: .8;
+    transition: all .3s;
+}
+.btnleft:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+.btnright:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+.btnleft {
+    background: linear-gradient(to right,#f67b1f,#ef2d58);
+}
+.btnright {
+    background: linear-gradient(to right,#0fcfd7,#5960ff);
+}
+
+/* case  */
+.case {
+    padding: 50px 0;
+}
+.caseCon {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.box {
+    margin-bottom: 30px;
+}
+.box img{
+    display: block;
+    transition: all .3s;
+}
+.box img:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 2px 3px #333;
+}
+
+/* client */
+.client_con ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.client_con ul li{
+    width: 16%;
+    padding: 10px;
+}
+.client_con ul li img{
+    width: 100%;
+}
+
+/* footer  */
+.footer {
+    margin-top: 90px;
+    background: #f4f4f4;
+    min-height: 100px;
+}
+.ftMain{
+    padding-top: 20px;
+}
+.ftLogo{
+    display: flex;
+}
+.ftLogo .text{
+    padding: 14px 0 0 10px;
+}
+.ftLogo .text p{
+    font-size: 12px;
+}
+.ftLogo .text h1{
+    font-size: 14px;
+}
+.ftCon {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+.ftCon a{
+    color: #333;
+}
+.ftContact h4{
+    padding-bottom: 5px;
+    color: #0fcfd7;
+}
+.ftContact p{
+    line-height: 1.6em;
+}
+.ftLink{
+    display: flex;
+}
+.ftLink .box{
+    padding: 0 40px;
+    text-align: center;
+}
+.ftLink h4{
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.ftLink a{
+    display: block;
+    font-size: 14px;
+    line-height: 1.8em;
+}
+.ft_vcode p{
+    text-align: center;
+}
+
+.copyright {
+    background: #000;
+    color: rgba(255, 255, 255, .6);
+    padding: 10px 0;
+    text-align: center;
+}
+.copyright a{
+    color: #fff;
+}
+.year {
+    color: rgba(255, 255, 255, .6);
+}
+
+/*  media Queries  */
+@media screen and (max-width:992px){
+    /* header  */
+    .pubCon{
+        width: 100%;
+    }
+    .hdNav{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        display: none;
+    }
+    .hdMenu{
+        display: block;
+    }
+    .hdNav ul{
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    .hdNav ul a{
+        background: rgba(255, 255, 255, .9);
+        line-height: 50px;
+    }
+    .hdNav li:hover a::after{
+        display: none;
+    }
+
+    /* banner  */
+    .banner {
+        height: 681px;
+    }
+    .banner a {
+        height: 681px;
+        background-size: cover;
+    }
+    .banner a.small{
+        display: block;
+    }
+    .banner a.big{
+        display: none;
+    }
+
+    /* common Tit  */
+    .pubTit{
+        text-align: center;
+        padding-bottom: 40px;
+    }
+    .pubTit h2{
+        font-size: 28px;
+    }
+    .pubTit .line {
+        width: 40px;
+    }
+
+    /* serve  */
+    .serveCon .box{
+        width: 50%;
+    }
+
+    /* client  */
+    .client_con ul li{
+        width: 33%;
+        padding: 10px;
+    }
+}
